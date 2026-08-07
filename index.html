@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QUARTER — 1日15分、AIと話すだけの英会話レッスン。</title>
+    <meta name="description" content="QUARTERは1日15分、AIチューターと話すだけのデスクトップ英会話アプリ。予約なし、月額なし。レッスンノートはあなたのPCにMarkdownで保存されます。">
+    <meta name="color-scheme" content="light">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="QUARTER — 1日15分、AIと話すだけの英会話レッスン。">
+    <meta property="og:description" content="予約なし。月額なし。PCを開いて、話すだけ。買い切りのデスクトップ英会話アプリ。">
+    <meta property="og:url" content="https://honake.github.io/quarter/">
+    <meta property="og:image" content="https://honake.github.io/quarter/assets/quarter-og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://honake.github.io/quarter/assets/quarter-og.png">
+    <link rel="canonical" href="https://honake.github.io/quarter/">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">本文へスキップ</a>
+
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <span class="brand">
+          <svg class="mascot" viewBox="0 0 24 24" aria-hidden="true">
+            <path class="mascot-body" d="M3.4 6.2a2.8 2.8 0 0 1 2.79-2.57A17.2 17.2 0 0 1 20.43 18.21a2.4 2.4 0 0 1-2.23 2.39H5.6a2.2 2.2 0 0 1-2.2-2.2Z"></path>
+            <g class="mascot-eyes">
+              <circle cx="8.6" cy="15.2" r="1.45"></circle>
+              <circle cx="13.4" cy="15.2" r="1.45"></circle>
+            </g>
+          </svg>
+          <span class="wordmark">QUARTER</span>
+        </span>
+        <a class="topbar-cta" href="#waitlist">ウェイトリスト</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- 1. Hero -->
+      <section class="hero">
+        <div class="wrap">
+          <p class="eyebrow"><span class="badge">ベータ準備中</span></p>
+          <!-- The tagline is a fixed piece of copy. It reveals word by word with the
+               in-app transcript cadence; the spans carry the stagger, not JS. -->
+          <h1 class="hero-title"
+            ><span class="word" style="--d: 0ms">1日15分、</span
+            ><span class="word" style="--d: 100ms">AIと</span
+            ><span class="word" style="--d: 200ms">話すだけの</span
+            ><span class="word" style="--d: 300ms">英会話</span
+            ><span class="word word-last" style="--d: 400ms">レッスン。</span
+          ></h1>
+          <p class="lead">予約なし。月額なし。キーボードも使わない。PCを開いて、<span class="mark" data-mark data-delay="900">声で話すだけ</span>。</p>
+          <div class="cta-row">
+            <a class="button button-primary" href="#waitlist">ウェイトリストに登録</a>
+            <a class="button button-ghost" href="https://x.com/slime_sryty" target="_blank" rel="noopener noreferrer">開発の様子を見る（X）</a>
+          </div>
+
+          <!-- One real pass through the complete product loop. Unlike decorative
+               motion, this content video keeps autoplaying under reduced motion. -->
+          <figure class="media hero-tour">
+            <video
+              class="media-video"
+              data-autoplay-content
+              src="assets/quarter-tour.mp4"
+              poster="assets/quarter-tour-poster.png"
+              width="1130"
+              height="756"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto"
+              aria-label="開始前の画面から会話、保存されたノート、進捗、ノート一覧までを見せるQUARTERの20秒ツアー"
+            ></video>
+            <figcaption>開始からノート、上達の記録まで。20秒でひと回り。</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 2. Benefits -->
+      <section class="section section-tint" aria-labelledby="benefits-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <svg class="mascot mascot-guide mascot-lean" viewBox="0 0 24 24" aria-hidden="true">
+              <path class="mascot-body" d="M3.4 6.2a2.8 2.8 0 0 1 2.79-2.57A17.2 17.2 0 0 1 20.43 18.21a2.4 2.4 0 0 1-2.23 2.39H5.6a2.2 2.2 0 0 1-2.2-2.2Z"></path>
+              <g class="mascot-eyes">
+                <circle cx="8.6" cy="15.2" r="1.45"></circle>
+                <circle cx="13.4" cy="15.2" r="1.45"></circle>
+              </g>
+            </svg>
+            <h2 id="benefits-heading" class="section-title">続く3つの理由</h2>
+          </div>
+          <div class="reasons">
+            <article class="reason-row">
+              <!-- main.js owns the difficulty tabs, lazy sources, and auto-advance. -->
+              <figure class="reason-media demo" data-demo>
+                <div class="demo-stage">
+                  <div class="demo-levels" role="group" aria-label="レッスンの難易度">
+                    <button type="button" class="level-tab is-active" data-level="beginner" aria-pressed="true"
+                      data-caption="ゆっくり短い文で優しくリードします">ビギナー</button>
+                    <button type="button" class="level-tab" data-level="daily" aria-pressed="false"
+                      data-caption="趣味や日常の話題を自然なテンポで話します">ノーマル</button>
+                    <button type="button" class="level-tab" data-level="business" aria-pressed="false"
+                      data-caption="仕事で使う言い回しまで踏み込みます">ビジネス</button>
+                    <button type="button" class="demo-audio-toggle" data-demo-audio aria-pressed="false"
+                      data-label-muted="音声を再生" data-label-playing="音声を切る"
+                      aria-label="音声を再生">音声を再生</button>
+                  </div>
+                  <div class="demo-viewport">
+                    <video
+                      class="media-video"
+                      data-level="beginner"
+                      src="assets/quarter-demo-beginner.mp4"
+                      poster="assets/quarter-demo-beginner-poster.png"
+                      width="1130"
+                      height="756"
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      aria-label="ビギナー向けのレッスン。実際のチューター音声つきでゆっくり短い文を話す様子"
+                    ></video>
+                    <video
+                      class="media-video"
+                      data-level="daily"
+                      data-src="assets/quarter-demo-daily.mp4"
+                      poster="assets/quarter-demo-daily-poster.png"
+                      width="1130"
+                      height="756"
+                      muted
+                      playsinline
+                      preload="none"
+                      aria-label="ノーマル向けのレッスン。実際のチューター音声つきで趣味の話を自然なテンポで進める様子"
+                      hidden
+                    ></video>
+                    <video
+                      class="media-video"
+                      data-level="business"
+                      data-src="assets/quarter-demo.mp4"
+                      poster="assets/quarter-demo-poster.png"
+                      width="1130"
+                      height="756"
+                      muted
+                      playsinline
+                      preload="none"
+                      aria-label="ビジネス向けのレッスン。実際のチューター音声つきで仕事の話を英語で進める様子"
+                      hidden
+                    ></video>
+                  </div>
+                </div>
+                <figcaption data-demo-caption aria-live="polite">ゆっくり短い文で優しくリードします</figcaption>
+              </figure>
+              <div class="reason-copy">
+                <h3>いまのレベルに合う15分</h3>
+                <p>最初に3分話すとCEFRレベルを自動で推定。チューターの話す速さと話題が<span class="mark" data-mark>あなたに合わせて変わります</span>。</p>
+              </div>
+            </article>
+
+            <article class="reason-row reason-row-reverse">
+              <figure class="reason-media reason-still">
+                <img
+                  src="assets/quarter-feature-note.png"
+                  width="600"
+                  height="475"
+                  loading="lazy"
+                  decoding="async"
+                  alt="保存されたレッスンノート。タイトル、日付・時間・レベルの情報、日本語訳・例文つきの表現が4件並ぶ"
+                >
+              </figure>
+              <div class="reason-copy">
+                <h3>自動で残るレッスンノート</h3>
+                <p>出てきた表現とその日の英語レベルをまとめたノートを<span class="mark" data-mark>毎回自動で生成</span>。日本語訳と例文、次回の練習内容つき。</p>
+              </div>
+            </article>
+
+            <article class="reason-row">
+              <figure class="reason-media reason-still">
+                <img
+                  src="assets/quarter-feature-progress.png"
+                  width="600"
+                  height="475"
+                  loading="lazy"
+                  decoding="async"
+                  alt="進捗画面の話す速さ。116語/分、8レッスンで+24という数値、上昇する推移グラフと最近の表現が並ぶ"
+                >
+              </figure>
+              <div class="reason-copy">
+                <h3>話した分だけ見える上達</h3>
+                <p>話す速さの推移と育っていく表現、続いた日数。積み上がりはすべて<span class="mark" data-mark>手元のPCに残ります</span>。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. How it works -->
+      <section class="section" aria-labelledby="how-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <svg class="mascot mascot-guide mascot-point" viewBox="0 0 24 24" aria-hidden="true">
+              <path class="mascot-body" d="M3.4 6.2a2.8 2.8 0 0 1 2.79-2.57A17.2 17.2 0 0 1 20.43 18.21a2.4 2.4 0 0 1-2.23 2.39H5.6a2.2 2.2 0 0 1-2.2-2.2Z"></path>
+              <g class="mascot-eyes">
+                <circle cx="8.6" cy="15.2" r="1.45"></circle>
+                <circle cx="13.4" cy="15.2" r="1.45"></circle>
+              </g>
+            </svg>
+            <h2 id="how-heading" class="section-title">はじめかたは3ステップ</h2>
+          </div>
+          <ol class="steps">
+            <li class="step">
+              <div class="step-head">
+                <span class="step-number" aria-hidden="true">1</span>
+                <!-- Step 1: the API key set onto its card. -->
+                <svg class="spot" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect class="fill-surface" x="2.4" y="5.6" width="19.2" height="12.8" rx="3"></rect>
+                  <path d="M2.4 9.4h19.2"></path>
+                  <circle class="fill-surface accent" cx="8" cy="14.3" r="2"></circle>
+                  <path class="accent" d="M10 14.3h7.3"></path>
+                  <path class="accent" d="M14.6 14.3v2.1"></path>
+                  <path class="accent" d="M17.3 14.3v1.6"></path>
+                </svg>
+              </div>
+              <div>
+                <h3>Gemini APIキーの設定</h3>
+                <p>初回セットアップが取得手順を1画面ずつ案内します。Google AI Studioで無料発行できます。</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-head">
+                <span class="step-number" aria-hidden="true">2</span>
+                <!-- Step 2: a spoken line comes back with a CEFR badge. -->
+                <svg class="spot" viewBox="0 0 24 24" aria-hidden="true">
+                  <path class="fill-surface" d="M5.6 4.4h12.8a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3h-6l-4.3 3.3v-3.3H5.6a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3Z"></path>
+                  <rect class="accent soft" x="7.6" y="7.6" width="8.8" height="5.4" rx="2.7"></rect>
+                  <text x="12" y="12" text-anchor="middle">B1</text>
+                </svg>
+              </div>
+              <div>
+                <h3>3分のスキルチェック</h3>
+                <p>少し話すだけでいまのレベル（CEFR）を自動判定します。5段階から自分で選んでも構いません。</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-head">
+                <span class="step-number" aria-hidden="true">3</span>
+                <!-- Step 3: the quarter wedge on a clock face — the brand shape, doing its job. -->
+                <svg class="spot" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle class="fill-surface" cx="12" cy="12" r="8.8"></circle>
+                  <path class="accent soft" d="M12 3.2A8.8 8.8 0 0 1 20.8 12H12Z"></path>
+                  <circle class="solid" cx="12" cy="12" r="1"></circle>
+                </svg>
+              </div>
+              <div>
+                <h3>1日15分の会話</h3>
+                <p>あとは開いて話すだけ。終わると自動でノートが保存され、次のレッスンに引き継がれます。</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 4. The two comparisons a visitor arrives with: "why not just talk to a
+           general AI chat?" and "why not an online English school?". Two cards
+           rather than a three-column feature matrix — a matrix is more table
+           than the rest of this page carries, and each objection has its own
+           answer rather than a shared list of rows.
+           The frame is deliberately not "the other thing is bad": a general AI
+           chat can hold an English conversation, and the difference named here
+           is who does the designing and what survives the session. Same for the
+           cost card — the comparison is to 月額数千円のサービス as a category,
+           never to a named competitor at a named price.
+           Tinted, and inserting a band here is what flipped 料金のしくみ to plain
+           and 動作環境 to tinted below, so the gray and white bands still
+           alternate all the way to the footer. -->
+      <section class="section section-tint" aria-labelledby="versus-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <svg class="mascot mascot-guide mascot-lean" viewBox="0 0 24 24" aria-hidden="true">
+              <path class="mascot-body" d="M3.4 6.2a2.8 2.8 0 0 1 2.79-2.57A17.2 17.2 0 0 1 20.43 18.21a2.4 2.4 0 0 1-2.23 2.39H5.6a2.2 2.2 0 0 1-2.2-2.2Z"></path>
+              <g class="mascot-eyes">
+                <circle cx="8.6" cy="15.2" r="1.45"></circle>
+                <circle cx="13.4" cy="15.2" r="1.45"></circle>
+              </g>
+            </svg>
+            <h2 id="versus-heading" class="section-title">AIチャットやオンライン英会話との違い</h2>
+          </div>
+          <p class="section-lead">どちらも良い選択肢です。違いを正直に書きます。</p>
+          <div class="versus">
+            <div class="versus-card">
+              <p class="versus-against">汎用のAIチャット（ChatGPTなど）と比べて</p>
+              <h3>開いて話すだけの15分</h3>
+              <ul class="versus-list">
+                <li>
+                  <span class="versus-key">学んだことの蓄積</span>
+                  覚えた表現が次のレッスンに再登場。使えた瞬間に<span class="mark" data-mark>チューターが褒めます</span>。
+                </li>
+                <li>
+                  <span class="versus-key">復習もアプリの中</span>
+                  ノート・表現アーカイブ・上達の記録が最初から揃っています。
+                </li>
+                <li>
+                  <span class="versus-key">プロンプトを書く必要なし</span>
+                  トピックと15分の流れとフィードバックまで用意済みです。
+                </li>
+              </ul>
+            </div>
+            <div class="versus-card">
+              <p class="versus-against">オンライン英会話と比べて</p>
+              <h3>月額のない英会話</h3>
+              <ul class="versus-list">
+                <li>
+                  <span class="versus-key">買い切りと従量だけ</span>
+                  ¥4,980（ベータ早割¥2,980）の買い切りとGeminiの従量利用料だけ。1レッスン（15分）あたり<span class="mark" data-mark>数十円</span>の試算です。
+                </li>
+                <li>
+                  <span class="versus-key">使わない月はゼロ円</span>
+                  サブスクなし。離れていた月の支払いもありません。
+                </li>
+                <li>
+                  <span class="versus-key">PCに最適化</span>
+                  机に向かって集中して話すための設計。予約もありません。
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. BYOK and cost. Plain rather than tinted since 2026-08-01: the
+           differentiation band above it took the tint, and the bands alternate. -->
+      <section id="cost" class="section" aria-labelledby="cost-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <svg class="mascot mascot-guide mascot-tilt" viewBox="0 0 24 24" aria-hidden="true">
+              <path class="mascot-body" d="M3.4 6.2a2.8 2.8 0 0 1 2.79-2.57A17.2 17.2 0 0 1 20.43 18.21a2.4 2.4 0 0 1-2.23 2.39H5.6a2.2 2.2 0 0 1-2.2-2.2Z"></path>
+              <g class="mascot-eyes">
+                <circle cx="8.6" cy="15.2" r="1.45"></circle>
+                <circle cx="13.4" cy="15.2" r="1.45"></circle>
+              </g>
+            </svg>
+            <h2 id="cost-heading" class="section-title">料金のしくみ</h2>
+          </div>
+          <p class="section-lead">QUARTERはご自身のGemini APIキーで動きます（BYOK）。</p>
+          <!-- The two cards carry the whole cost story between them: ① what
+               QUARTER charges once, ② what Google charges as you speak. There is
+               no third block restating ②, because the sentence a visitor must not
+               miss — that Gemini is not included — belongs on the card itself. -->
+          <div class="cost-split">
+            <div class="cost-card">
+              <p class="cost-label">① QUARTER本体</p>
+              <p class="cost-amount">¥2,980<span>ベータ早割・買い切り</span></p>
+              <ul class="cost-list">
+                <li>サブスクリプションなし・自動更新なし</li>
+                <li>アップデート込み</li>
+                <li>正式版価格は¥4,980</li>
+                <li>購入前に3レッスンの無料体験</li>
+              </ul>
+              <!-- The purchase path is Stripe Payment Links (ADR 0020). The
+                   button ships hidden and stays that way until STRIPE.paymentLink
+                   in main.js carries the live URL; main.js sets the href and
+                   reveals it. Until then the waitlist remains the only CTA, which
+                   is the honest state while sales are not open. -->
+              <a class="button button-primary buy-button" data-buy href="#" hidden>早割で購入する</a>
+            </div>
+            <span class="cost-plus" aria-hidden="true">+</span>
+            <div class="cost-card">
+              <p class="cost-label">② Gemini 利用料</p>
+              <p class="cost-amount">従量<span>Googleへ直接</span></p>
+              <p class="cost-note">あなたのGoogleアカウントへ直接請求され、QUARTERの価格には含まれません。無料枠から試せて、1日15分なら月あたり数百円程度のオーダーになる見込みですが、あくまで目安です。</p>
+              <p class="cost-note"><a href="#faq-free">無料枠でどのくらい使える？</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Requirements. Tinted again: it lost the tint when 価格 was deleted,
+           and got it back when the differentiation band pushed 料金のしくみ onto
+           the plain side. -->
+      <section class="section section-tint" aria-labelledby="requirements-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <svg class="mascot mascot-guide mascot-point" viewBox="0 0 24 24" aria-hidden="true">
+              <path class="mascot-body" d="M3.4 6.2a2.8 2.8 0 0 1 2.79-2.57A17.2 17.2 0 0 1 20.43 18.21a2.4 2.4 0 0 1-2.23 2.39H5.6a2.2 2.2 0 0 1-2.2-2.2Z"></path>
+              <g class="mascot-eyes">
+                <circle cx="8.6" cy="15.2" r="1.45"></circle>
+                <circle cx="13.4" cy="15.2" r="1.45"></circle>
+              </g>
+            </svg>
+            <h2 id="requirements-heading" class="section-title">動作環境</h2>
+          </div>
+          <!-- One fact per line. As a single wrapping row the four keys and their
+               four values ran together and had to be parsed; stacked they are read
+               at a glance, and the block is narrow enough to cost almost nothing. -->
+          <ul class="specs">
+            <!-- The app ships for Windows only today; the Mac build is a
+                 Phase 2 item. The page said "Windows / Mac" ahead of reality
+                 until 2026-08-02 — this line is the honest version. -->
+            <li><span class="spec-key">OS</span>Windows（Mac版は準備中）</li>
+            <li><span class="spec-key">マイク</span>内蔵でも可</li>
+            <li><span class="spec-key">APIキー</span>Gemini（無料発行）</li>
+            <li><span class="spec-key">通信</span>レッスン中のみ必要</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 7. FAQ -->
+      <section class="section" aria-labelledby="faq-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <svg class="mascot mascot-guide mascot-tilt" viewBox="0 0 24 24" aria-hidden="true">
+              <path class="mascot-body" d="M3.4 6.2a2.8 2.8 0 0 1 2.79-2.57A17.2 17.2 0 0 1 20.43 18.21a2.4 2.4 0 0 1-2.23 2.39H5.6a2.2 2.2 0 0 1-2.2-2.2Z"></path>
+              <g class="mascot-eyes">
+                <circle cx="8.6" cy="15.2" r="1.45"></circle>
+                <circle cx="13.4" cy="15.2" r="1.45"></circle>
+              </g>
+            </svg>
+            <h2 id="faq-heading" class="section-title">よくある質問</h2>
+          </div>
+          <div class="faq">
+            <details>
+              <summary>マイクは何でもいいですか？</summary>
+              <p><span class="sen">ノートPCの内蔵マイクでも動きます。</span><span class="sen">周囲の音が入りやすい場所では有線ヘッドセットのほうが安定します。</span></p>
+            </details>
+            <!-- The two settings pickers used to sit beside this list as whole-window
+                 stills. They are 2x crops now, inside the answers that describe them. -->
+            <details>
+              <summary>チューターの声やアクセントは変えられますか？</summary>
+              <p><span class="sen">8種類の声から選べて、イギリス英語とアメリカ英語のアクセントも切り替えられます。</span><span class="sen">設定画面からいつでも変更できます。</span></p>
+              <img
+                class="faq-shot"
+                src="assets/quarter-faq-voice.png"
+                width="1076"
+                height="570"
+                loading="lazy"
+                decoding="async"
+                alt="設定画面のTutor voice。8つの声と3つのアクセントの選択肢が並ぶ"
+              >
+            </details>
+            <details>
+              <summary>英語のレベルは合わせられますか？</summary>
+              <p><span class="sen">5段階のプリセットからいつでも選び直せます。</span><span class="sen">3分のスキルチェックをやり直せば、いまの実力に合わせて測り直せます。</span></p>
+              <img
+                class="faq-shot"
+                src="assets/quarter-faq-level.png"
+                width="1076"
+                height="402"
+                loading="lazy"
+                decoding="async"
+                alt="設定画面のLesson level。5段階のレベルと3分スキルチェックの再実行ボタンが並ぶ"
+              >
+            </details>
+            <details id="faq-free">
+              <summary>Geminiの無料枠でどのくらい使えますか？</summary>
+              <p><span class="sen">2026年8月1日現在、レッスンに使うGemini Live APIの音声入出力には無料枠があります。</span><span class="sen">1日に使える量の上限はGoogleアカウントごとに決まり、AI Studioの画面でいつでも確認できます。</span><span class="sen">無料枠を超えて課金を有効にした場合も、公式単価からの試算で1レッスン（15分）あたり数十円です。</span><span class="sen">単価と無料枠の内容は変わることがあります。</span></p>
+            </details>
+            <details>
+              <summary>課金はどのように発生しますか？</summary>
+              <p><span class="sen">QUARTERは買い切りのため、アプリから追加請求は発生しません。</span><span class="sen">Geminiの利用料はあなたのGoogleアカウントに直接発生します。</span></p>
+            </details>
+            <details>
+              <summary>データはどこに保存されますか？</summary>
+              <p><span class="sen">レッスンノートはドキュメントフォルダのQUARTERにMarkdownで保存され、APIキーはOSの安全な保存領域に保管されます。</span><span class="sen">保存先をObsidianのVaultへ変えることもできます。</span></p>
+            </details>
+            <details>
+              <summary>返金はできますか？</summary>
+              <p><span class="sen">購入前に3レッスンの無料体験で試せます。</span><span class="sen">デジタル製品の性質上、購入後の返金には原則対応しません。</span><span class="sen">不具合で利用できない場合は個別に対応します。</span></p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. Waitlist -->
+      <section id="waitlist" class="section section-tint" aria-labelledby="waitlist-heading">
+        <div class="wrap wrap-narrow wrap-center">
+          <svg class="mascot mascot-guide mascot-cheer" viewBox="0 0 24 24" aria-hidden="true">
+            <path class="mascot-body" d="M3.4 6.2a2.8 2.8 0 0 1 2.79-2.57A17.2 17.2 0 0 1 20.43 18.21a2.4 2.4 0 0 1-2.23 2.39H5.6a2.2 2.2 0 0 1-2.2-2.2Z"></path>
+            <g class="mascot-eyes-happy">
+              <path d="M6.5 15.9q1.5-1.9 3 0"></path>
+              <path d="M12.5 15.9q1.5-1.9 3 0"></path>
+            </g>
+          </svg>
+          <h2 id="waitlist-heading" class="section-title">ベータのお知らせ</h2>
+          <p class="section-lead">準備が整い次第、ダウンロードと購入の方法をお送りします。</p>
+          <!-- The form ships disabled and stays that way until WAITLIST in main.js
+               carries a Google Form action and entry name; main.js enables the
+               field and the button itself. The three states it can put into
+               #waitlist-status live in data-note-* here rather than in the script,
+               so every Japanese character on the page is in the markup the font
+               subset is built from.
+               TODO: WAITLIST を main.js で設定する。手順は apps/landing/README.md -->
+          <form class="waitlist-form" data-waitlist action="#" method="post"
+            aria-describedby="waitlist-status"
+            data-note-sending="送信中です。"
+            data-note-invalid="メールアドレスの形式をご確認ください。"
+            data-note-error="送信できませんでした。少し時間をおいて試してください。">
+            <label class="visually-hidden" for="waitlist-email">メールアドレス</label>
+            <input id="waitlist-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" disabled>
+            <button type="submit" disabled>登録する</button>
+          </form>
+          <p id="waitlist-status" class="waitlist-status" data-waitlist-status role="status">フォームは準備中です。</p>
+          <p class="waitlist-done" data-waitlist-done hidden>
+            <svg class="mascot" viewBox="0 0 24 24" aria-hidden="true">
+              <path class="mascot-body" d="M3.4 6.2a2.8 2.8 0 0 1 2.79-2.57A17.2 17.2 0 0 1 20.43 18.21a2.4 2.4 0 0 1-2.23 2.39H5.6a2.2 2.2 0 0 1-2.2-2.2Z"></path>
+              <g class="mascot-eyes-happy">
+                <path d="M6.5 15.9q1.5-1.9 3 0"></path>
+                <path d="M12.5 15.9q1.5-1.9 3 0"></path>
+              </g>
+            </svg>
+            <span>登録しました。案内をお待ちください。</span>
+          </p>
+          <a class="button button-ghost" href="https://x.com/slime_sryty" target="_blank" rel="noopener noreferrer">Xで開発を追う</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <span class="brand">
+          <svg class="mascot" viewBox="0 0 24 24" aria-hidden="true">
+            <path class="mascot-body" d="M3.4 6.2a2.8 2.8 0 0 1 2.79-2.57A17.2 17.2 0 0 1 20.43 18.21a2.4 2.4 0 0 1-2.23 2.39H5.6a2.2 2.2 0 0 1-2.2-2.2Z"></path>
+            <g class="mascot-eyes">
+              <circle cx="8.6" cy="15.2" r="1.45"></circle>
+              <circle cx="13.4" cy="15.2" r="1.45"></circle>
+            </g>
+          </svg>
+          <span class="wordmark">QUARTER</span>
+        </span>
+        <!-- Restored 2026-08-02 for the sales launch: the privacy sentence and
+             the trademark paragraph are back exactly as recorded in
+             apps/landing/README.md, and the links row now carries the three
+             legal pages and the real X account. The font credit stays out
+             deliberately — the OFL asks that the licence travel with the font
+             files (assets/fonts/OFL.txt does), not that a page credit it.
+             The support address (quarter.app.support@gmail.com, 2026-08-02) is a
+             dedicated Gmail forwarded into the owner's main inbox. -->
+        <p class="footer-privacy">プライバシー: 音声・会話・学習データを収集しません。すべてお使いのPCの中に残ります。</p>
+        <ul class="footer-links">
+          <li><a href="mailto:quarter.app.support@gmail.com">quarter.app.support@gmail.com</a></li>
+          <li><a href="legal/tokushoho.html">特定商取引法に基づく表記</a></li>
+          <li><a href="legal/privacy.html">プライバシーポリシー</a></li>
+          <li><a href="legal/terms.html">利用規約</a></li>
+          <li><a href="https://x.com/slime_sryty" target="_blank" rel="noopener noreferrer">X</a></li>
+        </ul>
+        <p class="footer-fine">Google Gemini および Google AI Studio は Google LLC の商標です。QUARTERはGoogle LLCと提携していません。Windows は Microsoft Corporation、Mac は Apple Inc. の商標です。</p>
+        <p class="footer-fine">© 2026 QUARTER · <a href="https://honake.github.io" target="_blank" rel="noopener noreferrer">honake.github.io</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
