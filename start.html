@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="QUARTER Windows版の無料ダウンロードとインストール。Windowsの警告、初回設定、手動更新の方法をご案内します。">
+  <title>最初の15分をはじめる | QUARTER</title>
+  <link rel="stylesheet" href="start.css">
+  <script src="start.js" defer></script>
+</head>
+<body>
+  <header class="top"><a class="brand" href="index.html" aria-label="QUARTER トップへ"><span class="mark" aria-hidden="true">··</span> QUARTER</a><a href="#help">インストールのヘルプ ↗</a></header>
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow">QUARTER / GET STARTED</p><h1>最初の15分を<br>はじめよう。</h1><p class="lead">アプリは無料。<br>必要なのはあなたのGemini APIキーだけ。</p><a class="primary" href="#download">Windows版のダウンロードへ <span aria-hidden="true">↓</span></a><p class="small">Windows 11・64bit（x64）／ Gemini APIキーが必要です</p></div>
+      <aside class="route" aria-label="使いはじめるまでの流れ"><p class="eyebrow">YOUR FIRST LESSON</p><ol><li><span>01</span><div><strong>PCにインストール</strong><p>起動とマイクを確認します。</p></div></li><li><span>02</span><div><strong>あなたのAPIキーを設定</strong><p>アプリが取得手順を案内します。</p></div></li><li><span>03</span><div><strong>話して、ノートを残す</strong><p>保存したノートが次のレッスンにつながります。</p></div></li></ol><p class="route-foot">予約なし。会話も、学びも、自分のペースで。</p></aside>
+    </section>
+    <section class="section" id="download"><div class="section-label">01 / DOWNLOAD</div><div><h2>インストール前の確認</h2><p>QUARTERのWindows版はコード署名のない配布形式です。Windowsが発行元を確認できないため、警告が表示されることがあります。PCの保護設定によっては起動できません。</p><div class="download-panel"><div><strong>QUARTER for Windows</strong><p class="small" data-release-note>配布の準備中です。</p><p class="small hash" data-release-hash hidden></p></div><a class="primary" data-download hidden>無料でダウンロード ↓</a><a href="https://x.com/slime_sryty" target="_blank" rel="noopener noreferrer" data-fallback-link>最新情報をXで見る ↗</a></div><p class="small">このページのダウンロードボタンだけをご利用ください。ボタンの横にバージョンとSHA-256を表示します。ハッシュ値は破損確認用で、発行元の証明ではありません。</p></div></section>
+    <section class="section" id="help"><div class="section-label">02 / INSTALL</div><div><h2>表示された画面に合わせて進めます。</h2><p>警告の種類によって、できることが異なります。</p>
+      <details open><summary>「WindowsによってPCが保護されました」</summary><div class="answer"><p>Microsoft Defender SmartScreenの警告です。<strong>公式配布元から入手したQUARTERで、発行元が未確認であることを理解して実行する場合</strong>は、次の順に進めます。</p><ol><li>画面の「詳細情報」を選びます。</li><li>ダウンロードしたQUARTERのファイル名を確認します。未署名版では発行元は不明と表示されます。</li><li>「実行」が表示されていれば選び、インストーラーの案内に従います。</li></ol><p class="small">Windowsのバージョンや組織の設定によって、文言や選択肢は異なります。「実行」がない場合は、下の項目をご確認ください。</p></div></details>
+      <details><summary>「管理者として実行」は必要？</summary><div class="answer"><p>必要ありません。ダウンロードしたファイルを通常どおりダブルクリックしてください。インストール方法の選択で最初から選ばれている「現在のユーザーのみ」のまま進めると、管理者権限なしでインストールできます。</p></div></details>
+      <details><summary>「Smart App Control がブロックしました」／ 実行できない</summary><div class="answer"><p>Smart App Controlにはアプリごとの許可設定がありません。その場合、このPCではQUARTERをご利用いただけません。保護機能を無効にしないでください。</p><p>会社や学校のPCでは管理者の方針が優先されます。許可が必要な場合は管理者へ確認してください。</p><p><a href="https://support.microsoft.com/en-us/windows/security/threat-malware-protection/smart-app-control-frequently-asked-questions" target="_blank" rel="noopener noreferrer">Microsoftの説明を確認する ↗</a></p></div></details>
+      <details><summary>ウイルス・脅威として検出された</summary><div class="answer"><p>実行を中止してください。除外設定や保護の無効化は行わず、ファイル名・バージョン・検出名をサポートへお知らせください。APIキーや会話履歴は送らないでください。</p></div></details>
+      <details><summary>レッスンが始まらなくなった</summary><div class="answer"><p>Googleがモデルを更新・終了すると、QUARTERはあなたのAPIキーで使える新しいモデルへ自動で切り替えます。</p><p>それでも始まらない場合は、設定の「接続テストを実行」でどこが失敗しているかを確認してください。「Geminiのモデル」の「モデルを指定する」から、Googleの公式ドキュメントにあるモデル名を直接入力することもできます。</p></div></details>
+      <details><summary>新しいバージョンに更新したい</summary><div class="answer"><p>QUARTERは自動更新しません。レッスンを終了してQUARTERを閉じ、保存先のノートをバックアップしてから、このページで案内する新しいインストーラーを実行してください。</p><p>ユーザーデータを削除する必要はありません。インストール先と学習データは別々に保存されます。</p></div></details>
+    </div></section>
+    <section class="section"><div class="section-label">03 / SPEAK</div><div><h2>準備ができたら、話してみましょう。</h2><ol class="setup"><li><strong>Gemini APIキーを登録</strong><p>初回セットアップからGoogle AI Studioの取得手順を確認できます。Geminiの利用料はGoogleの料金・利用枠に従い、あなたのGoogleアカウントに直接発生します。</p></li><li><strong>マイクを許可して、レベルを設定</strong><p>3分のスキルチェックで話しやすいレベルを確認できます。音が出ない場合はPCの入出力設定も確認してください。</p></li><li><strong>レッスンを開始し、終了後に保存</strong><p>声で会話し、終了して保存すると学習ノートが残ります。ノートはNotesからいつでも読み返せます。</p></li></ol></div></section>
+    <section class="closing"><p class="eyebrow">KEEP YOUR DAILY QUARTER</p><h2>毎日の15分のための無料アプリ</h2><p>QUARTERは個人開発の無料アプリで、現状のままの提供です。<br>不具合の報告は受け付けますが、個別の対応や修正はお約束できません。</p><a href="index.html#cost">Gemini利用料の目安へ →</a></section>
+  </main>
+  <footer><a class="brand" href="index.html">QUARTER</a><p>困ったときは <a href="mailto:quarter.app.support@gmail.com">quarter.app.support@gmail.com</a></p><nav aria-label="法務"><a href="legal/privacy.html">プライバシー</a><a href="legal/terms.html">利用規約</a></nav><p class="small">© 2026 QUARTER</p></footer>
+</body>
+</html>
